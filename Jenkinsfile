@@ -7,11 +7,12 @@ pipeline {
                 echo 'Building..'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
+        stage("Read Manifest Config") {
+	node {
+		def configVal = readYaml file: "action.yml"
+	
+	}
+}
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
