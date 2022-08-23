@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('Read Manifest Config') {
-	stage {
+	    steps {
 		def configVal = readYaml file: "action.yml"
 	
 	}
