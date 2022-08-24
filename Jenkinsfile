@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
             }
         }
-        stage('Read Manifest Config') {
+        stage('Run PMD scan') {
 	    steps {
 		echo 'Testing..'
 		    yamlFile "action.yml"
