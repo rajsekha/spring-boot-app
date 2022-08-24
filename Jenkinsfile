@@ -10,8 +10,8 @@ pipeline {
         stage('Read Manifest Config') {
 	    steps {
 		echo 'Testing..'
-		def configVal = readYaml file: "https://github.com/amitkapis/spring-boot-app.git/action.yml"
-	
+		    yamlFile "action.yml"
+		
 	}
 }
         stage('Deploy') {
