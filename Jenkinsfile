@@ -12,10 +12,9 @@ pipeline {
 		echo 'Testing..'
 		    bat '''
 		    readYaml file: "action.yml"
-		    '''
-		
-	}
-}
+		    '''	
+	    }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
