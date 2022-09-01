@@ -10,9 +10,6 @@ pipeline {
         stage('Run PMD scan') {
 	    steps {
 		echo 'Testing..'
-		    bat '''
-		    readYaml file: "action.yml"
-		    '''	
 	    }
         }
         stage('Deploy') {
