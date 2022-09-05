@@ -10,7 +10,7 @@ pipeline {
 	    steps {
 		echo 'Testing..'
 		bat '''
-		pmd -d src/main -R ruleset.xml -f text >>Pmdlog.txt
+		pmd -d src/main -R ruleset.xml >>Pmdlog.txt
 		'''
 	    }
         }
