@@ -10,9 +10,11 @@ pipeline {
         stage('Run PMD scan') {
 	    steps {
 		echo 'Testing..'
-		
-	}
-}
+		bat '''
+		pmd -d src/main -R ruleset.xml -f text
+		'''
+	    }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
