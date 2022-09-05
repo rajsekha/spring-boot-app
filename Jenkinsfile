@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
@@ -14,11 +13,6 @@ pipeline {
 		pmd -d src/main -R ruleset.xml -f text
 		'''
 	    }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
         }
     }
 }
